@@ -8,9 +8,14 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia veniam eveniet eum.</p>
         </div>
         <div class="row">
-            <div class="col-12">
-                
-            </div>
+            @foreach ($movies as $movie)
+                <div class="col-4">
+                    <div>
+                        <h2>{{ $movie->title }}</h2>
+                    </div>
+                </div>
+            @endforeach
+           
         </div>
     </div>
 @endsection
