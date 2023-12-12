@@ -8,10 +8,12 @@
     @vite('resources/js/app.js')
 </head>
 <body>
+    @include('partials.header')
 
-        <main>
-            @yield('content')
-        </main>
+    <main class="bg-custom py-3">
+        @yield('content')
+    </main>
     
+    @include('partials.footer')
 </body>
 </html>
