@@ -12,9 +12,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\Guest\PageController;
 
-Route::get('/', [PageController]);
+Route::get('/', [PageController::class, 'index'])->name('home');
 
-// function () {
-//     return view('guest.index');
-// });
+
