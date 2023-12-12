@@ -4,18 +4,22 @@
 @section('content')
     <div class="container">
         <div>
-            <h1>questa è la Home Page</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia veniam eveniet eum.</p>
+            <h1>Film old but gold</h1>  
         </div>
         <div class="row">
             @foreach ($movies as $movie)
                 <div class="col-4">
-                    <div>
-                        <h2>{{ $movie->title }}</h2>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Title: {{ $movie->title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Original Title: {{ $movie->original_title }}</h6>
+                            <p class="card-text">country: {{ $movie->nationality }}</p>
+                            <p class="card-text">date: {{ $movie->date }}</p>
+                            <p class="card-text">vote: {{ $movie->vote }}</p>
+                        </div>
                     </div>
                 </div>
             @endforeach
-           
         </div>
     </div>
 @endsection
