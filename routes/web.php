@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('guest.index');
-});
+Route::get('/', [PageController]);
+
+// function () {
+//     return view('guest.index');
+// });
